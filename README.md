@@ -25,4 +25,4 @@ This application has available option to select from Menu. This application has 
 
 # Class Diagram
 
-[Alt text](files/classdiagram/cd.png?raw=true "Title")
+[Class Diagram](files/classdiagram/cd.png?raw=true "Title")
