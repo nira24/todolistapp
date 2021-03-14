@@ -1,16 +1,19 @@
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 public class Task {
     private String TaskName;
-    private String  ProjectName;
-    private String Status;
+    private String ProjectName;
+    private String TaskStatus;
     private Date TaskDate;
 
-    public Task(String TaskName, String ProjectName, String Status, Date TaskDate) {
-        this.TaskName = TaskName;
+    public Task(String TaskName, String ProjectName, String TaskStatus, Date TaskDate)
+    {
+        this.TaskName = TaskName
+        ;
         this.ProjectName = ProjectName;
-        this.Status = Status;
+        this.TaskStatus = TaskStatus;
         this.TaskDate = TaskDate;
     }
 
@@ -18,28 +21,28 @@ public class Task {
         return TaskName;
     }
 
-    public String getProjectName() {
-        return ProjectName;
-    }
-
-    public String getStatus() {
-        return Status;
-    }
-
-    public Date getTaskDate() {
-        return TaskDate;
-    }
-
     public void setTaskName(String taskName) {
         TaskName = taskName;
+    }
+
+    public String getProjectName() {
+        return ProjectName;
     }
 
     public void setProjectName(String projectName) {
         ProjectName = projectName;
     }
 
-    public void setStatus(String status) {
-        Status = status;
+    public String getTaskStatus() {
+        return TaskStatus;
+    }
+
+    public void setTaskStatus(String taskStatus) {
+        TaskStatus = taskStatus;
+    }
+
+    public Date getTaskDate() {
+        return TaskDate;
     }
 
     public void setTaskDate(Date taskDate) {
