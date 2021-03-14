@@ -18,19 +18,9 @@ public class TaskInput {
     public  void displayMainMenu() throws Exception{
 
         todo = new TodoList();
-        
-        /*fetch from input text file
-        try {
 
-            todo.inputData();
-
-        } catch (Exception e)
-        {
-            System.out.println("Error");
-        }*/
-
-        System.out.println("\nMAIN MENU");
-        System.out.println("===========\n");
+        System.out.println("\nWELCOME TO TODO LIST APP");
+        System.out.println("============================\n");
         System.out.println("Pick an option:");
         System.out.println("(1) Show Task List (by date or project)");
         System.out.println("(2) Add New Task ");
@@ -143,8 +133,7 @@ public class TaskInput {
             editfield = 1;
 
             todo.editTasklist(TaskNo,input1,editfield);
-            System.out.println("Enter the option");
-            option = scanInput();
+
         }
         if(option ==2)
         {
@@ -153,8 +142,7 @@ public class TaskInput {
             editfield = 2;
 
             todo.editTasklist(TaskNo,input2,editfield);
-            System.out.println("Enter the option");
-            option = scanInput();
+
         }
         if(option ==3)
         {
@@ -163,8 +151,7 @@ public class TaskInput {
             editfield = 3;
 
             todo.editTasklist(TaskNo,input3,editfield);
-            System.out.println("Enter the option");
-            option = scanInput();
+
 
         }
         if(option ==4)
@@ -174,8 +161,7 @@ public class TaskInput {
             editfield = 4;
 
             todo.editTasklist(TaskNo,input4,editfield);
-            System.out.println("Enter the option");
-            option = scanInput();
+
 
         }
 
@@ -193,8 +179,7 @@ public class TaskInput {
         {
             System.out.println("Error occured to delete a Task");
         }
-        System.out.println("Enter the option");
-        option = scanInput();
+
 
     }
 

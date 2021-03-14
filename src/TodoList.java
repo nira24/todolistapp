@@ -26,8 +26,6 @@ public class TodoList {
     }
 
     //Adding created task object in ArrayList with TaskName, ProjectName,TaskStatus and Date of that Task.
-
-
     public void displayInput() {
         int cunt = 0;
         int select;
@@ -64,44 +62,6 @@ public class TodoList {
         System.out.println("NO of Tasks Open: " + StatusOpen + "NO of Tasks Closed: " + StatusClosed);
         StatusClosed = 0;
         StatusOpen = 0;
-
-    }
-
-    //Method Reads the input Data and save the details into ArrayLiast of Task
-    public void inputData() throws FileNotFoundException {
-        File file = null;
-        Date TaskDate = null;
-        JFileChooser chooser = new JFileChooser();
-        int returnValue = chooser.showOpenDialog(null);
-
-        if (returnValue == JFileChooser.APPROVE_OPTION) {
-            file = chooser.getSelectedFile();
-        }
-
-        if (file != null) {
-            filename = file.getPath();
-        }
-
-        BufferedReader tasklistfile = new BufferedReader(new FileReader(filename));
-        String st;
-
-        try {
-            while ((st = tasklistfile.readLine()) != null) {
-                String st1 = st.toString();
-                String[] array = st1.split(";");
-                try {
-
-                    TaskDate = formatter.parse(array[3]);
-                } catch (ParseException p) {
-                    System.out.println("Error");
-                }
-
-                tasklist.add(new Task(array[0], array[1], array[2], TaskDate));
-
-            }
-        } catch (IOException i) {
-            i.printStackTrace();
-        }
 
     }
 
@@ -169,7 +129,7 @@ public class TodoList {
     }
 
     public int scanInput() {
-        Scanner scan = new Scanner(System.in);x§
+        Scanner scan = new Scanner(System.in);
         int a = scan.nextInt();
         return a;
     }
