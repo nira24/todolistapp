@@ -32,41 +32,31 @@ public class TaskInput {
 
         while(!(setExit))
         {
-            /*
-             *  Display the To do list task
-             */
+
+
             if(option == 1)
             {
                 displayTask();
             }
 
-            /*
-             *  Add new task to the list
-             */
+
             if(option == 2)
             {
                 addTask();
             }
 
-            /*
-             *  Edit the Todo List
-             */
             if(option == 3)
             {
                 editTask();
             }
 
-            /*
-             * Delete the task from the list
-             */
+
             if (option == 4)
             {
                 deleteTask();
             }
 
-            /*
-             *  Save and Exit
-             */
+
             if(option == 5)
             {
                 saveAndexitTask();

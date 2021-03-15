@@ -65,16 +65,6 @@ public class TodoList {
 
     }
 
-    public void outputWriter() throws IOException {
-        BufferedWriter writer = new BufferedWriter(new FileWriter(filename));
-
-        for (Task out : tasklist) {
-            writer.write(out.getTaskName() + ";" + out.getProjectName() + ";" + out.getTaskStatus() + ";" + formatter.format(out.getTaskDate()) + "\n");
-        }
-
-        writer.close();
-    }
-
     //Add a new Task
     public void addTasklist(String TaskName, String ProjectName, String TaskStatus, Date TaskDate) throws Exception {
         DateFormat formatter = new SimpleDateFormat("dd-mm-yyyy");
@@ -133,6 +123,17 @@ public class TodoList {
         int a = scan.nextInt();
         return a;
     }
+
+    public void outputWriter() throws IOException {
+        BufferedWriter writer = new BufferedWriter(new FileWriter(filename));
+
+        for (Task out : tasklist) {
+            writer.write(out.getTaskName() + ";" + out.getProjectName() + ";" + out.getTaskStatus() + ";" + formatter.format(out.getTaskDate()) + "\n");
+        }
+
+        writer.close();
+    }
+
 
 
 }
