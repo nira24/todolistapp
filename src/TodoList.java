@@ -3,7 +3,6 @@ import java.io.*;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
@@ -36,18 +35,20 @@ public class TodoList {
         select = scanInput();
 
         if (select == 1) {
-            tasklist.sort((Task d1, Task d2) -> d1.getTaskDate().compareTo(d2.getTaskDate()));
+
+            tasklist.sort((Task t1, Task t2) -> t1.getTaskDate().compareTo(t2.getTaskDate()));
         } else if (select == 2) {
-            tasklist.sort((Task d1, Task d2) -> d1.getProjectName().compareTo(d2.getProjectName()));
+
+            tasklist.sort((Task t1, Task t2) -> t1.getProjectName().compareTo(t2.getProjectName()));
         }
-        String displayinput = "%-4s%-35s %-20s %-10s %-10s";
-        System.out.println(String.format(displayinput, "TaskNO", "TaskName", "ProjectName", "Status", "Date"));
-        System.out.println(String.format(displayinput, "------", "--------", "-----------", "------", "----"));
+        String displayinput = "%-10s %-12s %-12s %-10s %-10s";
+        System.out.println(String.format(displayinput, "  TaskNO", "TaskName", " ProjectName", " Status", "  Date"));
+        System.out.println(String.format(displayinput, "---------","----------","-----------"," --------","---------"));
 
         for (Task file : tasklist) {
             cunt = cunt + 1;
 
-            System.out.println(String.format(displayinput, cunt, file.getTaskName(), file.getProjectName(), file.getTaskStatus(), file.getTaskDate()));
+            System.out.println(String.format(displayinput, cunt, file.getTaskName(), file.getProjectName(), file.getTaskStatus(), formatter.format(file.getTaskDate())));
             String changeCase = file.getTaskStatus().toUpperCase();
 
             if (changeCase.equals("OPEN")) {
@@ -59,7 +60,7 @@ public class TodoList {
                 StatusClosed = StatusClosed + 1;
             }
         }
-        System.out.println("NO of Tasks Open: " + StatusOpen + "NO of Tasks Closed: " + StatusClosed);
+        System.out.println("Number of Tasks Open: " + StatusOpen + "  Number of Tasks Closed: " + StatusClosed);
         StatusClosed = 0;
         StatusOpen = 0;
 
@@ -74,7 +75,9 @@ public class TodoList {
         Date inputDateWithZeroTime = formatter.parse(formatter.format(TaskDate));
 
         if (inputDateWithZeroTime.compareTo(todayWithZeroTime) < 0) {
+
             System.out.println("Please Enter the correct Date");
+
         } else {
             tasklist.add(new Task(TaskName, ProjectName, TaskStatus, TaskDate));
         }
@@ -94,8 +97,11 @@ public class TodoList {
             tasklist.set(editIndex, new Task(tasklist.get(editIndex).getTaskName(), tasklist.get(editIndex).getProjectName(), inputField, tasklist.get(editIndex).getTaskDate()));
         }
         if (changeField == 4) {
+
             try {
+
                 date = formatter.parse(inputField);
+
             } catch (ParseException p) {
                 System.out.println("Error occured while editing the TaskList");
             }
@@ -106,8 +112,11 @@ public class TodoList {
             Date inputDateWithZeroTime = formatter.parse(formatter.format(date));
 
             if (inputDateWithZeroTime.compareTo(todayWithZeroTime) < 0) {
+
                 System.out.println("Date Entered should be greater than today");
+
             } else {
+
                 tasklist.set(editIndex, new Task(tasklist.get(editIndex).getTaskName(), tasklist.get(editIndex).getProjectName(), tasklist.get(editIndex).getTaskStatus(), date));
             }
         }

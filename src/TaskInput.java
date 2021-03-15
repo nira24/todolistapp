@@ -1,4 +1,5 @@
 
+import java.text.ParseException;
 import java.util.Date;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -9,25 +10,24 @@ public class TaskInput {
     private boolean setExit = false;
     private String input1, input2, input3, input4;
     private TodoList todo;
-    private Date date;
+    private Date Date;
     private int editfield;
     DateFormat formatter = new SimpleDateFormat("dd-mm-yyyy");
-    private Date Date;
+
 
     //This method will display the main menu and display all the options for User to select.
     public  void displayMainMenu() throws Exception{
 
         todo = new TodoList();
 
-        System.out.println("\nWELCOME TO TODO LIST APP");
-        System.out.println("============================\n");
-        System.out.println("Pick an option:");
+        System.out.println("\n>>>> WELCOME TO TODO LIST APP");
+        System.out.println("================================\n");
         System.out.println("(1) Show Task List (by date or project)");
         System.out.println("(2) Add New Task ");
         System.out.println("(3) Edit Task ");
         System.out.println("(4) Delete Task ");
         System.out.println("(5) Save and Quit\n ");
-        System.out.print("Please enter your option: ");
+        System.out.print("Please Select your Option: ");
         option = scanInput();
 
         while(!(setExit))
@@ -80,7 +80,7 @@ public class TaskInput {
     }
 
     //Add Task
-    private void addTask() throws Exception
+    private void addTask() throws ParseException
     {
         System.out.println("Enter the Task name   :  ");
         input1 = scanString();
@@ -94,22 +94,33 @@ public class TaskInput {
             Date = formatter.parse(input4);
 
         }
-        catch (Exception b)
+        catch (ParseException b)
         {
-            System.out.println("Error");
+            System.out.println("Please Enter the correct Date");
         }
-        try {
 
+        try {
             todo.addTasklist(input1, input2, input3, Date);
-        } catch (Exception c) {
-            System.out.println("Enter the option");
+            System.out.println("Task added Successfully!! Please select Another Option to proceed Further");
+            System.out.println("(1) Show Task List (by date or project)");
+            System.out.println("(2) Add New Task ");
+            System.out.println("(3) Edit Task ");
+            System.out.println("(4) Delete Task ");
+            System.out.println("(5) Save and Quit\n ");
             option = scanInput();
+
+        } catch (Exception c) {
+            System.out.println("Error while adding a Task");
+
         }
+
     }
 
     //This Method will display the edit Menu to the User
     private void editTask() throws Exception {
-        System.out.println("Enter the Task no want to Edit");
+        System.out.println("Enter the Task Num you want to Edit");
+        TaskNo = scanInput();
+        TaskNo = TaskNo - 1;
         System.out.println("Enter the option you want to Edit");
         System.out.println("1.Task Name  ");
         System.out.println("2.Project Name ");
@@ -121,8 +132,18 @@ public class TaskInput {
             System.out.println("Edit Task Name : ");
             input1 = scanString();
             editfield = 1;
-
+        try {
             todo.editTasklist(TaskNo,input1,editfield);
+        }catch (Exception e){
+            System.out.println("Error while Editing");
+        }
+            System.out.println("Please select Another Option to proceed Further");
+            System.out.println("(1) Show Task List (by date or project)");
+            System.out.println("(2) Add New Task ");
+            System.out.println("(3) Edit Task ");
+            System.out.println("(4) Delete Task ");
+            System.out.println("(5) Save and Quit\n ");
+            option = scanInput();
 
         }
         if(option ==2)
@@ -131,7 +152,19 @@ public class TaskInput {
             input2 = scanString();
             editfield = 2;
 
+        try {
             todo.editTasklist(TaskNo,input2,editfield);
+        }
+        catch (Exception c){
+            System.out.println("Error while Editing");
+        }
+            System.out.println("Please select Another Option to proceed Further");
+            System.out.println("(1) Show Task List (by date or project)");
+            System.out.println("(2) Add New Task ");
+            System.out.println("(3) Edit Task ");
+            System.out.println("(4) Delete Task ");
+            System.out.println("(5) Save and Quit\n ");
+            option = scanInput();
 
         }
         if(option ==3)
@@ -140,8 +173,19 @@ public class TaskInput {
             input3 = scanString();
             editfield = 3;
 
+        try {
             todo.editTasklist(TaskNo,input3,editfield);
-
+        }
+        catch (Exception f){
+            System.out.println("Error while Editing");
+        }
+            System.out.println("Please select Another Option to proceed Further");
+            System.out.println("(1) Show Task List (by date or project)");
+            System.out.println("(2) Add New Task ");
+            System.out.println("(3) Edit Task ");
+            System.out.println("(4) Delete Task ");
+            System.out.println("(5) Save and Quit\n ");
+            option = scanInput();
 
         }
         if(option ==4)
@@ -150,8 +194,19 @@ public class TaskInput {
             input4 = scanString();
             editfield = 4;
 
+        try {
             todo.editTasklist(TaskNo,input4,editfield);
-
+        }
+        catch (Exception f){
+            System.out.println("Error while Editing");
+        }
+            System.out.println("Please select Another Option to proceed Further");
+            System.out.println("(1) Show Task List (by date or project)");
+            System.out.println("(2) Add New Task ");
+            System.out.println("(3) Edit Task ");
+            System.out.println("(4) Delete Task ");
+            System.out.println("(5) Save and Quit\n ");
+            option = scanInput();
 
         }
 
@@ -169,6 +224,13 @@ public class TaskInput {
         {
             System.out.println("Error occured to delete a Task");
         }
+        System.out.println("Please select Another Option to proceed Further");
+        System.out.println("(1) Show Task List (by date or project)");
+        System.out.println("(2) Add New Task ");
+        System.out.println("(3) Edit Task ");
+        System.out.println("(4) Delete Task ");
+        System.out.println("(5) Save and Quit\n ");
+        option = scanInput();
 
 
     }
@@ -187,7 +249,12 @@ public class TaskInput {
     private void displayTask()
     {
         todo.displayInput();
-        System.out.println("Enter the option");
+        System.out.println("Please select Another Option to proceed Further");
+        System.out.println("(1) Show Task List (by date or project)");
+        System.out.println("(2) Add New Task ");
+        System.out.println("(3) Edit Task ");
+        System.out.println("(4) Delete Task ");
+        System.out.println("(5) Save and Quit\n ");
         option = scanInput();
     }
 

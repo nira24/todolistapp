@@ -21,31 +21,31 @@ public class Task {
         return TaskName;
     }
 
-    public void setTaskName(String taskName) {
-        TaskName = taskName;
+    public void setTaskName(String setTaskName) {
+        TaskName = setTaskName;
     }
 
     public String getProjectName() {
         return ProjectName;
     }
 
-    public void setProjectName(String projectName) {
-        ProjectName = projectName;
+    public void setProjectName(String setProjectName) {
+        ProjectName = setProjectName;
     }
 
     public String getTaskStatus() {
         return TaskStatus;
     }
 
-    public void setTaskStatus(String taskStatus) {
-        TaskStatus = taskStatus;
+    public void setTaskStatus(String setTaskStatus) {
+        TaskStatus = setTaskStatus;
     }
 
     public Date getTaskDate() {
         return TaskDate;
     }
 
-    public void setTaskDate(Date taskDate) {
-        TaskDate = taskDate;
+    public void setTaskDate(Date setTaskDate) {
+        TaskDate = setTaskDate;
     }
 }

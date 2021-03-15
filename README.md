@@ -21,6 +21,10 @@ This application has available option to select from Menu. This application has 
 - remove the Task
 
 #How to get started:
+Required Software to be Installed:*
+
+
+-IntelliJ IDEA 2020.3.2
 
 #Class: Task.java
 
