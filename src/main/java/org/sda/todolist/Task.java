@@ -1,3 +1,5 @@
+package org.sda.todolist;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
@@ -10,8 +12,7 @@ public class Task {
 
     public Task(String TaskName, String ProjectName, String TaskStatus, Date TaskDate)
     {
-        this.TaskName = TaskName
-        ;
+        this.TaskName = TaskName;
         this.ProjectName = ProjectName;
         this.TaskStatus = TaskStatus;
         this.TaskDate = TaskDate;

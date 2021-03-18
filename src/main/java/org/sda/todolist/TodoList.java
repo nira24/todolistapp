@@ -1,3 +1,5 @@
+package org.sda.todolist;
+
 import javax.swing.*;
 import java.io.*;
 import java.text.DateFormat;
@@ -14,7 +16,7 @@ public class TodoList {
     private boolean setExit = false;
     private String inputText1, inputText2, inputText3, inputText4;
     private int StatusOpen = 0, StatusClosed = 0;
-    DateFormat formatter = new SimpleDateFormat("dd-mm-yyyy");
+    DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
     String filename = null;
 
     public ArrayList<Task> tasklist;
@@ -24,8 +26,9 @@ public class TodoList {
         tasklist = new ArrayList<Task>();
     }
 
-    //Adding created task object in ArrayList with TaskName, ProjectName,TaskStatus and Date of that Task.
+    //Adding created task object in ArrayList with TaskName, ProjectName,TaskStatus and Date of that org.sda.todolist.Task.
     public void displayInput() {
+
         int cunt = 0;
         int select;
         System.out.println("Please Enter your choice - for sorting");
@@ -66,9 +69,55 @@ public class TodoList {
 
     }
 
-    //Add a new Task
+    public void raderfile() throws IOException {
+        Date date = null;
+
+        JFileChooser chooser = new JFileChooser();
+        int value = chooser.showOpenDialog(null);
+        File file = null;
+        if(value == JFileChooser.APPROVE_OPTION)
+        {
+            file = chooser.getSelectedFile();
+
+        }
+        if(file != null)
+        {
+            filename = file.getPath();
+        }
+
+        BufferedReader tasklistFile = new BufferedReader(new FileReader(filename));
+        String st;
+        try{
+            while ((st = tasklistFile.readLine()) != null)
+            {
+            String st1 = st.toString();
+            String[]arr = st1.split(";");
+                try{
+                    date = formatter.parse(arr[3]);
+                }catch(ParseException p){
+                    System.out.println("Error while reading the Date field");
+                }
+
+                tasklist.add(new Task(arr[0],arr[1],arr[2],date));
+            }
+    } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void outputWriter() throws IOException {
+        BufferedWriter writer = new BufferedWriter(new FileWriter(filename));
+
+        for (Task out : tasklist) {
+            writer.write(out.getTaskName() + ";" + out.getProjectName() + ";" + out.getTaskStatus() + ";" + formatter.format(out.getTaskDate()) + "\n");
+        }
+
+        writer.close();
+    }
+
+    //Add a new org.sda.todolist.Task
     public void addTasklist(String TaskName, String ProjectName, String TaskStatus, Date TaskDate) throws Exception {
-        DateFormat formatter = new SimpleDateFormat("dd-mm-yyyy");
+        DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
 
         Date today = new Date();
         Date todayWithZeroTime = formatter.parse(formatter.format(today));
@@ -83,7 +132,7 @@ public class TodoList {
         }
     }
 
-    //Edit the Task List
+    //Edit the org.sda.todolist.Task List
     public void editTasklist(int editIndex, String inputField, int changeField) throws IOException, ParseException {
         Date date = null;
 
@@ -105,7 +154,7 @@ public class TodoList {
             } catch (ParseException p) {
                 System.out.println("Error occured while editing the TaskList");
             }
-            DateFormat formatter = new SimpleDateFormat(("dd-mm-yyyy"));
+            DateFormat formatter = new SimpleDateFormat(("dd-MM-yyyy"));
 
             Date today = new Date();
             Date todayWithZeroTime = formatter.parse(formatter.format(today));
@@ -124,7 +173,7 @@ public class TodoList {
 
     public void deleteTasklist(int deleteindex) throws Exception {
         tasklist.remove(deleteindex);
-        System.out.println("Task deleted Successfully");
+        System.out.println("org.sda.todolist.Task deleted Successfully");
     }
 
     public int scanInput() {
@@ -132,17 +181,5 @@ public class TodoList {
         int a = scan.nextInt();
         return a;
     }
-
-    public void outputWriter() throws IOException {
-        BufferedWriter writer = new BufferedWriter(new FileWriter(filename));
-
-        for (Task out : tasklist) {
-            writer.write(out.getTaskName() + ";" + out.getProjectName() + ";" + out.getTaskStatus() + ";" + formatter.format(out.getTaskDate()) + "\n");
-        }
-
-        writer.close();
-    }
-
-
 
 }

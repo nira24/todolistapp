@@ -8,17 +8,17 @@ This application has available option to select from Menu. This application has 
 
 #Basic Features:
 
-- Task Name
-- Task Date
-- Task Status
+- org.sda.todolist.Task Name
+- org.sda.todolist.Task Date
+- org.sda.todolist.Task Status
 - Project Name
 
 #Basic Functionality:
-- add Task
-- edit Task
-- mark as Task done
-- Save Task
-- remove the Task
+- add org.sda.todolist.Task
+- edit org.sda.todolist.Task
+- mark as org.sda.todolist.Task done
+- Save org.sda.todolist.Task
+- remove the org.sda.todolist.Task
 
 #How to get started:
 Required Software to be Installed:*
@@ -26,31 +26,31 @@ Required Software to be Installed:*
 
 -IntelliJ IDEA 2020.3.2
 
-#Class: Task.java
+#Class: org.sda.todolist.Task.java
 
-- In Task.java class four fields are created: TaskName, ProjectName, TaskStatus, TaskDate.
+- In org.sda.todolist.Task.java class four fields are created: TaskName, ProjectName, TaskStatus, TaskDate.
 - Getter and Setter of all the fields are generated.
 
 
-#Class:TodoList.java
+#Class:org.sda.todolist.TodoList.java
 
 -In this class All the methods for task records are generated.
 
--Display() method will create the Task object in tasklist.
+-Display() method will create the org.sda.todolist.Task object in tasklist.
 
 -addTasklist() method will add task recored to the arraylist of task.
 
--editTasklist() method  will edit Stored Task based on the field user will select.
+-editTasklist() method  will edit Stored org.sda.todolist.Task based on the field user will select.
 
--deleteTasklist() method will delete the Task recored from the Arraylist of task which is already stored.
+-deleteTasklist() method will delete the org.sda.todolist.Task recored from the Arraylist of task which is already stored.
 
-#Class:TaskInput.java
+#Class:org.sda.todolist.TaskInput.java
 
 -In this class all the methods are created for user input.
 
-- Displaymainmenu() method will display Main Menu of the Todo Application.User will be asked to choose one action among four options.
+- Displaymainmenu() method will display org.sda.todolist.Main Menu of the Todo Application.User will be asked to choose one action among four options.
 
-- AddTask() method will ask User to enter the values to add a new Task.
+- AddTask() method will ask User to enter the values to add a new org.sda.todolist.Task.
 
 - editTask() method will ask User to select the field which has to be edited.
 
