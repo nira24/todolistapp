@@ -1,7 +1,7 @@
 package org.sda.todolist;
 
-import java.util.Scanner;
 
+//This class contains main method and it contains display method which will display the main manu to the User.
 public class Main {
     public static void main(String[] args) throws Exception {
 

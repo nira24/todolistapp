@@ -18,34 +18,42 @@ public class Task {
         this.TaskDate = TaskDate;
     }
 
+    // Return TaskName
     public String getTaskName() {
         return TaskName;
     }
 
+    // Set TaskName
     public void setTaskName(String setTaskName) {
         TaskName = setTaskName;
     }
 
+    // Return ProjectName
     public String getProjectName() {
         return ProjectName;
     }
 
+    // Set ProjectName
     public void setProjectName(String setProjectName) {
         ProjectName = setProjectName;
     }
 
+    // Return TaskStatus
     public String getTaskStatus() {
         return TaskStatus;
     }
 
+    // Set TaskStatus
     public void setTaskStatus(String setTaskStatus) {
         TaskStatus = setTaskStatus;
     }
 
+    // Return TaskDate
     public Date getTaskDate() {
         return TaskDate;
     }
 
+    // Set TaskDate
     public void setTaskDate(Date setTaskDate) {
         TaskDate = setTaskDate;
     }

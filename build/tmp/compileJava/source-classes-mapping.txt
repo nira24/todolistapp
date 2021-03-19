@@ -1,8 +1,8 @@
-java/todolistapp/Task.java
- Task
-java/todolistapp/Main.java
- Main
-java/todolistapp/TaskInput.java
- TaskInput
-java/todolistapp/TodoList.java
- TodoList
+org/sda/todolist/Main.java
+ org.sda.todolist.Main
+org/sda/todolist/Task.java
+ org.sda.todolist.Task
+org/sda/todolist/TodoList.java
+ org.sda.todolist.TodoList
+org/sda/todolist/TaskInput.java
+ org.sda.todolist.TaskInput

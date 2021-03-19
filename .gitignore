@@ -7,6 +7,14 @@
 # BlueJ files
 *.ctxt
 
+*.idea/*
+*.settings/
+*src/.DS_Store
+*files/.DS_Store
+
+*.gradle/*
+
+
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 

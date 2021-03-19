@@ -22,6 +22,7 @@ public class TaskInput {
 
         todo = new TodoList();
 
+        //Read frominput Text file.
         try{
             todo.raderfile();
         }
@@ -31,11 +32,11 @@ public class TaskInput {
         }
 
         System.out.println("\n>>>> WELCOME TO TODO LIST APP");
-        System.out.println("================================\n");
-        System.out.println("(1) Show org.sda.todolist.Task List (by date or project)");
-        System.out.println("(2) Add New org.sda.todolist.Task ");
-        System.out.println("(3) Edit org.sda.todolist.Task ");
-        System.out.println("(4) Delete org.sda.todolist.Task ");
+        System.out.println("=======================================\n");
+        System.out.println("(1) Show Task List (by date or project)");
+        System.out.println("(2) Add New Task ");
+        System.out.println("(3) Edit Task ");
+        System.out.println("(4) Delete Task ");
         System.out.println("(5) Save and Quit\n ");
         System.out.print("Please Select your Option: ");
         option = scanInput();
@@ -69,7 +70,7 @@ public class TaskInput {
 
             if(option == 5)
             {
-                saveAndexitTask();
+                SaveandExitTask();
             }
         }
 
@@ -81,7 +82,7 @@ public class TaskInput {
         return i;
     }
 
-    //Read the input FileReader
+
     public String scanString()
     {
         Scanner scan = new Scanner(System.in);
@@ -89,10 +90,10 @@ public class TaskInput {
         return St;
     }
 
-    //Add org.sda.todolist.Task
+    //This method take input from User to add the task.
     private void addTask() throws ParseException
     {
-        System.out.println("Enter the org.sda.todolist.Task name   :  ");
+        System.out.println("Enter the Task name   :  ");
         input1 = scanString();
         System.out.println("Enter the ProjectName :  ");
         input2 = scanString();
@@ -111,16 +112,16 @@ public class TaskInput {
 
         try {
             todo.addTasklist(input1, input2, input3, Date);
-            System.out.println("org.sda.todolist.Task added Successfully!! Please select Another Option to proceed Further");
-            System.out.println("(1) Show org.sda.todolist.Task List (by date or project)");
-            System.out.println("(2) Add New org.sda.todolist.Task ");
-            System.out.println("(3) Edit org.sda.todolist.Task ");
-            System.out.println("(4) Delete org.sda.todolist.Task ");
+            System.out.println("Task added Successfully!! Please select Another Option to proceed Further");
+            System.out.println("(1) Show Task List (by date or project)");
+            System.out.println("(2) Add New Task ");
+            System.out.println("(3) Edit Task ");
+            System.out.println("(4) Delete Task ");
             System.out.println("(5) Save and Quit\n ");
             option = scanInput();
 
         } catch (Exception c) {
-            System.out.println("Error while adding a org.sda.todolist.Task");
+            System.out.println("Error while adding a Task");
 
         }
 
@@ -128,18 +129,18 @@ public class TaskInput {
 
     //This Method will display the edit Menu to the User
     private void editTask() throws Exception {
-        System.out.println("Enter the org.sda.todolist.Task Num you want to Edit");
+        System.out.println("Enter the Task Num you want to Edit");
         TaskNo = scanInput();
         TaskNo = TaskNo - 1;
         System.out.println("Enter the option you want to Edit");
-        System.out.println("1.org.sda.todolist.Task Name  ");
+        System.out.println("1.Task Name  ");
         System.out.println("2.Project Name ");
-        System.out.println("3.org.sda.todolist.Task Status ");
+        System.out.println("3.Task Status ");
         System.out.println("4.Date ");
         option = scanInput();
         if(option ==1)
         {
-            System.out.println("Edit org.sda.todolist.Task Name : ");
+            System.out.println("Edit Task Name : ");
             input1 = scanString();
             editfield = 1;
         try {
@@ -148,10 +149,10 @@ public class TaskInput {
             System.out.println("Error while Editing");
         }
             System.out.println("Please select Another Option to proceed Further");
-            System.out.println("(1) Show org.sda.todolist.Task List (by date or project)");
-            System.out.println("(2) Add New org.sda.todolist.Task ");
-            System.out.println("(3) Edit org.sda.todolist.Task ");
-            System.out.println("(4) Delete org.sda.todolist.Task ");
+            System.out.println("(1) Show Task List (by date or project)");
+            System.out.println("(2) Add New .Task ");
+            System.out.println("(3) Edit Task ");
+            System.out.println("(4) Delete Task ");
             System.out.println("(5) Save and Quit\n ");
             option = scanInput();
 
@@ -169,10 +170,10 @@ public class TaskInput {
             System.out.println("Error while Editing");
         }
             System.out.println("Please select Another Option to proceed Further");
-            System.out.println("(1) Show org.sda.todolist.Task List (by date or project)");
-            System.out.println("(2) Add New org.sda.todolist.Task ");
-            System.out.println("(3) Edit org.sda.todolist.Task ");
-            System.out.println("(4) Delete org.sda.todolist.Task ");
+            System.out.println("(1) Task List (by date or project)");
+            System.out.println("(2) Add New Task ");
+            System.out.println("(3) Edit Task ");
+            System.out.println("(4) Delete Task ");
             System.out.println("(5) Save and Quit\n ");
             option = scanInput();
 
@@ -190,10 +191,10 @@ public class TaskInput {
             System.out.println("Error while Editing");
         }
             System.out.println("Please select Another Option to proceed Further");
-            System.out.println("(1) Show org.sda.todolist.Task List (by date or project)");
-            System.out.println("(2) Add New org.sda.todolist.Task ");
-            System.out.println("(3) Edit org.sda.todolist.Task ");
-            System.out.println("(4) Delete org.sda.todolist.Task ");
+            System.out.println("(1) Show Task List (by date or project)");
+            System.out.println("(2) Add New Task ");
+            System.out.println("(3) Edit Task ");
+            System.out.println("(4) Delete Task ");
             System.out.println("(5) Save and Quit\n ");
             option = scanInput();
 
@@ -211,10 +212,10 @@ public class TaskInput {
             System.out.println("Error while Editing");
         }
             System.out.println("Please select Another Option to proceed Further");
-            System.out.println("(1) Show org.sda.todolist.Task List (by date or project)");
-            System.out.println("(2) Add New org.sda.todolist.Task ");
-            System.out.println("(3) Edit org.sda.todolist.Task ");
-            System.out.println("(4) Delete org.sda.todolist.Task ");
+            System.out.println("(1) Show Task List (by date or project)");
+            System.out.println("(2) Add New Task ");
+            System.out.println("(3) Edit Task ");
+            System.out.println("(4) Delete Task ");
             System.out.println("(5) Save and Quit\n ");
             option = scanInput();
 
@@ -222,7 +223,7 @@ public class TaskInput {
 
     }
 
-    //Delete org.sda.todolist.Task
+    //This method will ask User to delete the task
     private void deleteTask() throws Exception {
         System.out.println("Enter the TaskNo to be deleted ");
         TaskNo =scanInput();
@@ -232,21 +233,21 @@ public class TaskInput {
         }
         catch (Exception e)
         {
-            System.out.println("Error occured to delete a org.sda.todolist.Task");
+            System.out.println("Error occured to delete a Task");
         }
         System.out.println("Please select Another Option to proceed Further");
-        System.out.println("(1) Show org.sda.todolist.Task List (by date or project)");
-        System.out.println("(2) Add New org.sda.todolist.Task ");
-        System.out.println("(3) Edit org.sda.todolist.Task ");
-        System.out.println("(4) Delete org.sda.todolist.Task ");
+        System.out.println("(1) Show Task List (by date or project)");
+        System.out.println("(2) Add New Task ");
+        System.out.println("(3) Edit Task ");
+        System.out.println("(4) Delete Task ");
         System.out.println("(5) Save and Quit\n ");
         option = scanInput();
 
 
     }
 
-    //Save and Exit org.sda.todolist.Task
-    private void saveAndexitTask() throws Exception{
+    //This method will display User to Save the existing task and Exit
+    private void SaveandExitTask() throws Exception{
         try {
             todo.outputWriter();
         }
@@ -254,16 +255,20 @@ public class TaskInput {
         {
             System.out.println("Error occured to write into the file");
         }
+        System.out.println("Your All Task are saved!!");
+        System.out.println("See you soon!! Have a nice day!");
         setExit = true;
     }
+
+    //This method display the option to User.
     private void displayTask()
     {
         todo.displayInput();
         System.out.println("Please select Another Option to proceed Further");
-        System.out.println("(1) Show org.sda.todolist.Task List (by date or project)");
-        System.out.println("(2) Add New org.sda.todolist.Task ");
-        System.out.println("(3) Edit org.sda.todolist.Task ");
-        System.out.println("(4) Delete org.sda.todolist.Task ");
+        System.out.println("(1) Show Task List (by date or project)");
+        System.out.println("(2) Add New Task ");
+        System.out.println("(3) Edit Task ");
+        System.out.println("(4) Delete Task ");
         System.out.println("(5) Save and Quit\n ");
         option = scanInput();
     }

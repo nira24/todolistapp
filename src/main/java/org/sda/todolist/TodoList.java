@@ -9,12 +9,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 
-//In this class
+
 public class TodoList {
 
-    private int option, TaskNo, TaskName, ProjectName, Status, TaskDate;
     private boolean setExit = false;
-    private String inputText1, inputText2, inputText3, inputText4;
     private int StatusOpen = 0, StatusClosed = 0;
     DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
     String filename = null;
@@ -25,6 +23,8 @@ public class TodoList {
     public TodoList() {
         tasklist = new ArrayList<Task>();
     }
+
+
 
     //Adding created task object in ArrayList with TaskName, ProjectName,TaskStatus and Date of that org.sda.todolist.Task.
     public void displayInput() {
@@ -46,7 +46,7 @@ public class TodoList {
         }
         String displayinput = "%-10s %-12s %-12s %-10s %-10s";
         System.out.println(String.format(displayinput, "  TaskNO", "TaskName", " ProjectName", " Status", "  Date"));
-        System.out.println(String.format(displayinput, "---------","----------","-----------"," --------","---------"));
+        System.out.println(String.format(displayinput, "---------","----------","------------"," --------","---------"));
 
         for (Task file : tasklist) {
             cunt = cunt + 1;
@@ -63,12 +63,13 @@ public class TodoList {
                 StatusClosed = StatusClosed + 1;
             }
         }
-        System.out.println("Number of Tasks Open: " + StatusOpen + "  Number of Tasks Closed: " + StatusClosed);
+        System.out.println("\nNumber of Tasks Open: " + StatusOpen + "\nNumber of Tasks Closed: " + StatusClosed);
         StatusClosed = 0;
         StatusOpen = 0;
 
     }
 
+    //Read the input Text file and Store the details into Arraylist of Task
     public void raderfile() throws IOException {
         Date date = null;
 
@@ -105,6 +106,7 @@ public class TodoList {
         }
     }
 
+    //Write back to the file which should be used when you open the Todo list task next time.
     public void outputWriter() throws IOException {
         BufferedWriter writer = new BufferedWriter(new FileWriter(filename));
 
@@ -115,8 +117,8 @@ public class TodoList {
         writer.close();
     }
 
-    //Add a new org.sda.todolist.Task
-    public void addTasklist(String TaskName, String ProjectName, String TaskStatus, Date TaskDate) throws Exception {
+    //This method will add the new object of task in the task arraylist
+    public  void  addTasklist(String TaskName, String ProjectName, String TaskStatus, Date TaskDate) throws Exception {
         DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
 
         Date today = new Date();
@@ -132,7 +134,7 @@ public class TodoList {
         }
     }
 
-    //Edit the org.sda.todolist.Task List
+    //This method will edit the task data which is already exist in task Arraylist.
     public void editTasklist(int editIndex, String inputField, int changeField) throws IOException, ParseException {
         Date date = null;
 
@@ -171,9 +173,10 @@ public class TodoList {
         }
     }
 
+    //This method will delete the Task from Task Arraylist.
     public void deleteTasklist(int deleteindex) throws Exception {
         tasklist.remove(deleteindex);
-        System.out.println("org.sda.todolist.Task deleted Successfully");
+        System.out.println("Task Deleted Successfully!!");
     }
 
     public int scanInput() {
