@@ -4,57 +4,99 @@ This application is a Java program to create and store you personal tasks as Tod
 
 #Basic Overview:
 
-This application has available option to select from Menu. This application has feature to save all User Tasks in the Data so when User open next time it will resume its state.
+This application has available option to select from Menu. This application has featured to save all User Tasks in the Data so when User open next time it will resume its state.
 
 #Basic Features:
 
-- org.sda.todolist.Task Name
-- org.sda.todolist.Task Date
-- org.sda.todolist.Task Status
+- Task Name
+- Task Date
+- Task Status
 - Project Name
 
 #Basic Functionality:
-- add org.sda.todolist.Task
-- edit org.sda.todolist.Task
-- mark as org.sda.todolist.Task done
-- Save org.sda.todolist.Task
-- remove the org.sda.todolist.Task
+- add Task
+- edit Task
+- Save Task
+- remove Task
+
+#Built with
+
+JDK 15.0.2
+JUnit 5.7.1
+Gradle 6.8.3
+Git 2.24.3
 
 #How to get started:
-Required Software to be Installed:*
 
+The application can be run directly via Gradle or via a generated Jar file.
 
--IntelliJ IDEA 2020.3.2
+#Run with Gradle
 
-#Class: org.sda.todolist.Task.java
+In the root folder, start application with Gradle Run command.
+```bash
+gradle run --console plain
+````
+#Run with Jar file
 
-- In org.sda.todolist.Task.java class four fields are created: TaskName, ProjectName, TaskStatus, TaskDate.
-- Getter and Setter of all the fields are generated.
+Generate the jar file with Gradle command
+```bash
+gradle build
+```
+The jar file will be generated in build/libs which can be run by a java environment.
 
+```bash
+   java -jar build/libs/todo-list-1.0-SNAPSHOT.jar
+```
 
-#Class:org.sda.todolist.TodoList.java
+#User Manual
 
--In this class All the methods for task records are generated.
+#Main Menu
 
--Display() method will create the org.sda.todolist.Task object in tasklist.
+As the Application starts running it shows window to select a .txt file to choose to input data.
 
--addTasklist() method will add task recored to the arraylist of task.
+![img.png](files/img.png)
 
--editTasklist() method  will edit Stored org.sda.todolist.Task based on the field user will select.
+The main menu will offer user 5 options to choose action.
 
--deleteTasklist() method will delete the org.sda.todolist.Task recored from the Arraylist of task which is already stored.
+![img_1.png](files/img_1.png)
 
-#Class:org.sda.todolist.TaskInput.java
+Option 1: Show Task List 
+If User will choose option 1 then it will show the list of Tasks already saved based on sorting based on the Date or the ProjectName.
 
--In this class all the methods are created for user input.
+![img_2.png](files/img_2.png)
 
-- Displaymainmenu() method will display org.sda.todolist.Main Menu of the Todo Application.User will be asked to choose one action among four options.
+Option 2: Add New Task
+If User select option 2 then it will ask 
+1. TaskName
+2. ProjectName
+3. TaskStatus
+4. TaskDate
 
-- AddTask() method will ask User to enter the values to add a new org.sda.todolist.Task.
+After adding all the fields properly Task will add to the TaskList.
 
-- editTask() method will ask User to select the field which has to be edited.
+![img_3.png](files/img_3.png)
 
-- deleteTask() method will ask user for deleting the task from recored.
+Option 3: Edit Existing Task
+If User select option 3 then it will ask User which TaskNo is to be edited.
 
-- saveandexitTask() method will provide the functionality of saving the task.
+![img_4.png](files/img_4.png)
+
+Option 4: Delete Task
+If User select option 4 then it will ask User which TaskNo is to be deleted.
+
+![img_5.png](files/img_5.png)
+
+Option 5: Save and Exit
+If User select option 5 then all task added will be saved to the TaskList.
+
+![img_6.png](files/img_6.png)
+
+##Author 
+
+Nirali Thaker
+
+##Acknowledgments
+
+Special Thank you to all the TAs and SDAmates for all the support.
+
 
