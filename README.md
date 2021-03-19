@@ -74,7 +74,7 @@ If User select option 2 then it will ask
 
 After adding all the fields properly Task will add to the TaskList.
 
-![img_3.png](files/addtask.png)
+![img_3.png](files/ADDTASK.png)
 
 Option 3: Edit Existing Task
 If User select option 3 then it will ask User which TaskNo is to be edited.
