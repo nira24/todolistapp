@@ -13,7 +13,7 @@ This application has available option to select from Menu. This application has 
 - Task Status
 - Project Name
 
-#Basic Functionality:
+# Basic Functionality:
 - add Task
 - edit Task
 - Save Task
@@ -30,13 +30,13 @@ Git 2.24.3
 
 The application can be run directly via Gradle or via a generated Jar file.
 
-#Run with Gradle
+# Run with Gradle
 
 In the root folder, start application with Gradle Run command.
 ```bash
 gradle run --console plain
 ````
-#Run with Jar file
+# Run with Jar file
 
 Generate the jar file with Gradle command
 ```bash
@@ -48,9 +48,9 @@ The jar file will be generated in build/libs which can be run by a java environm
    java -jar build/libs/todo-list-1.0-SNAPSHOT.jar
 ```
 
-#User Manual
+# User Manual
 
-#Main Menu
+# Main Menu
 
 As the Application starts running it shows window to select a .txt file to choose to input data.
 
@@ -90,11 +90,11 @@ If User select option 5 then all task added will be saved to the TaskList.
 
 ![img_6.png](files/save_exit.png)
 
-##Author 
+## Author 
 
 Nirali Thaker
 
-##Acknowledgments
+## Acknowledgments
 
 Special Thank you to all the TAs and SDAmates for all the support.
 
