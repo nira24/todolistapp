@@ -1,8 +1,8 @@
 package org.sda.todolistapp;
 
 import org.junit.Test;
-import org.sda.todolist.Task;
-import org.sda.todolist.TodoList;
+import Task;
+import TodoList;
 
 import java.text.DateFormat;
 import java.text.ParseException;

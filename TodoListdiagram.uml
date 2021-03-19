@@ -4,29 +4,29 @@
   <OriginalElement />
   <nodes>
     <node x="826.5" y="445.0">org.sda.todolistapp.TestTask</node>
-    <node x="501.0" y="256.0">org.sda.todolist.TaskInput</node>
-    <node x="113.5" y="488.5">org.sda.todolist.Task</node>
-    <node x="79.0" y="-24.5">org.sda.todolist.TodoList</node>
+    <node x="501.0" y="256.0">TaskInput</node>
+    <node x="113.5" y="488.5">Task</node>
+    <node x="79.0" y="-24.5">TodoList</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="org.sda.todolist.TaskInput" target="org.sda.todolist.TodoList">
+    <edge source="TaskInput" target="TodoList">
       <point x="0.0" y="-104.0" />
       <point x="600.0" y="120.0" />
       <point x="161.0" y="40.0" />
     </edge>
-    <edge source="org.sda.todolist.TodoList" target="org.sda.todolist.Task">
+    <edge source="TodoList" target="Task">
       <point x="0.0" y="104.5" />
       <point x="0.0" y="-71.5" />
     </edge>
-    <edge source="org.sda.todolistapp.TestTask" target="org.sda.todolist.Task">
+    <edge source="org.sda.todolistapp.TestTask" target="Task">
       <point x="-133.5" y="-0.0" />
       <point x="126.5" y="-0.0" />
     </edge>
   </edges>
   <settings layout="Directed Orthogonal" zoom="0.684292588575305" x="601.0024285614343" y="272.04267973690435" />
   <SelectedNodes>
-    <node>org.sda.todolist.TodoList</node>
+    <node>TodoList</node>
   </SelectedNodes>
   <Categories>
     <Category>Methods</Category>

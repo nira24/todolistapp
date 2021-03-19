@@ -26,7 +26,7 @@ public class TodoList {
         tasklist = new ArrayList<Task>();
     }
 
-    //Adding created task object in ArrayList with TaskName, ProjectName,TaskStatus and Date of that org.sda.todolist.Task.
+    //Adding created task object in ArrayList with TaskName, ProjectName,TaskStatus and Date of that Task.
     public void displayInput() {
 
         int cunt = 0;
@@ -115,7 +115,7 @@ public class TodoList {
         writer.close();
     }
 
-    //Add a new org.sda.todolist.Task
+    //Add a new Task
     public void addTasklist(String TaskName, String ProjectName, String TaskStatus, Date TaskDate) throws Exception {
         DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
 
@@ -132,7 +132,7 @@ public class TodoList {
         }
     }
 
-    //Edit the org.sda.todolist.Task List
+    //Edit the Task List
     public void editTasklist(int editIndex, String inputField, int changeField) throws IOException, ParseException {
         Date date = null;
 
@@ -173,7 +173,7 @@ public class TodoList {
 
     public void deleteTasklist(int deleteindex) throws Exception {
         tasklist.remove(deleteindex);
-        System.out.println("org.sda.todolist.Task deleted Successfully");
+        System.out.println("Task deleted Successfully");
     }
 
     public int scanInput() {

@@ -21,7 +21,7 @@ dependencies {
 
 jar {
     manifest {
-        attributes 'Main-Class': 'org.sda.todolist.Main'
+        attributes 'Main-Class': 'Main'
     }
 }
 
