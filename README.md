@@ -1,8 +1,8 @@
-#Todo-List App
-
+# Todo-List App
+ 
 This application is a Java program to create and store you personal tasks as Todo List.
 
-#Basic Overview:
+# Basic Overview:
 
 This application has available option to select from Menu. This application has featured to save all User Tasks in the Data so when User open next time it will resume its state.
 
