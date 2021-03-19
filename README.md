@@ -1,12 +1,12 @@
-#Todo-List App
+# Todo-List App
 
 This application is a Java program to create and store you personal tasks as Todo List.
 
-#Basic Overview:
+# Basic Overview:
 
 This application has available option to select from Menu. This application has featured to save all User Tasks in the Data so when User open next time it will resume its state.
 
-#Basic Features:
+# Basic Features:
 
 - Task Name
 - Task Date
@@ -19,14 +19,14 @@ This application has available option to select from Menu. This application has 
 - Save Task
 - remove Task
 
-#Built with
+# Built with
 
 JDK 15.0.2
 JUnit 5.7.1
 Gradle 6.8.3
 Git 2.24.3
 
-#How to get started:
+# How to get started:
 
 The application can be run directly via Gradle or via a generated Jar file.
 
