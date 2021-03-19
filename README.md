@@ -54,16 +54,15 @@ The jar file will be generated in build/libs which can be run by a java environm
 
 As the Application starts running it shows window to select a .txt file to choose to input data.
 
-![img.png](files/img.png)
+![img.png](files/input_reader.png)
 
 The main menu will offer user 5 options to choose action.
 
-![img_1.png](files/img_1.png)
 
 Option 1: Show Task List 
 If User will choose option 1 then it will show the list of Tasks already saved based on sorting based on the Date or the ProjectName.
 
-![img_2.png](files/img_2.png)
+![img_2.png](files/view_task_after_exit.png)
 
 Option 2: Add New Task
 If User select option 2 then it will ask 
@@ -74,22 +73,22 @@ If User select option 2 then it will ask
 
 After adding all the fields properly Task will add to the TaskList.
 
-![img_3.png](files/img_3.png)
+![img_3.png](files/addtask.png)
 
 Option 3: Edit Existing Task
 If User select option 3 then it will ask User which TaskNo is to be edited.
 
-![img_4.png](files/img_4.png)
+![img_4.png](files/edit_task.png)
 
 Option 4: Delete Task
 If User select option 4 then it will ask User which TaskNo is to be deleted.
 
-![img_5.png](files/img_5.png)
+![img_5.png](files/delete_task.png)
 
 Option 5: Save and Exit
 If User select option 5 then all task added will be saved to the TaskList.
 
-![img_6.png](files/img_6.png)
+![img_6.png](files/save_exit.png)
 
 ##Author 
 
