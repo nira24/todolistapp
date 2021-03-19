@@ -58,6 +58,7 @@ As the Application starts running it shows window to select a .txt file to choos
 
 The main menu will offer user 5 options to choose action.
 
+![img.png](files/welcome.png)
 
 Option 1: Show Task List 
 If User will choose option 1 then it will show the list of Tasks already saved based on sorting based on the Date or the ProjectName.
